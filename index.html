@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meechie Documentary Intake</title>
+    <script src="script.js"></script>
     <style>
         body {
             margin: 0;
@@ -17,7 +18,7 @@
             color: #333;
         }
         .container {
-            width: 50%;
+            width: 67%;
             margin: 0 auto;
             padding: 20px;
             border: 1px solid #ccc;
@@ -85,6 +86,17 @@
             border: 2px solid blue;
             margin-bottom: 20px;
         }
+        .submit_button {
+            background-color: red;
+            color: yellow;
+            border: none;
+            border-radius: 15px; /* Adjust for more or less curve */
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: crosshair;
+            position: relative;
+            left: 50px;
+        }
     </style>
 </head>
 <body>
@@ -92,13 +104,18 @@
 <div class="container">
     <h1>T'Marcus "Meechie" Guthridge Documentary</h1>
 
+<form id="tributeForm" onsubmit="return validateForm()">
+    <!-- Name Input -->
     <label class="top2" id="your_info">Your Info:</label>
 
     <label class="top2" for="name">Your name (As it will appear in the credits):</label>
     <input type="text" id="name" name="name">
+    <small id="nameError" style="color:rgb(153, 0, 255)"></small>
 
+    <!-- Email Input -->
     <label for="email">Your Email:</label>
     <input type="email" id="email" name="email">
+    <small id="emailError" style="color:rgb(153, 0, 255)"></small>
 
     <label for="relationship">Relationship to T'Marcus:</label>
     <input type="text" id="relationship" name="relationship" placeholder="(friend, family, colleague, etc)">
@@ -110,13 +127,18 @@
 
     <label for="memory">Memory Submission</label>
 
+    <!-- Memory Input -->
     <label for="memory">Memory/Tribute:</label>
     <textarea id="memory" name="memory"></textarea>
+    <small id="memoryError" style="color:rgb(153, 0, 255)"></small>
 
     <label for="file-upload">Upload Photos/Video:</label>
-    <input type="file" id="file-upload" name="file-upload">
+    <input type="file" id="file-upload" name="files[]" multiple>
     <br>
     <button class="upload-btn">Upload</button>
+    
 
-    <div class="checkbox">
-        <input type="checkbox
+    <button class="submit_button" type="submit">Submit</button>
+</form>
+
+
