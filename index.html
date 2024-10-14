@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meechie Documentary Intake</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-image: url('/Photos/Meechie.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #000000;
+            color: #333;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: rgb(235, 212, 69);
+        }
+        label {
+            display: block;
+            font-size: 17px;
+            margin-bottom: 8px;
+            color: rgb(223, 211, 45);
+        }
+        .top2 {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: rgb(212, 197, 63);
+            font-weight: bolder;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid red;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        textarea {
+            height: 150px;
+        }
+        input[type="file"] {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .upload-btn {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .checkbox {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox label {
+            margin-left: 10px;
+            font-size: 14px;
+            color: blue;
+        }
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .captcha-box {
+            width: 200px;
+            padding: 10px;
+            border: 2px solid blue;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>T'Marcus "Meechie" Guthridge Documentary</h1>
+
+    <label class="top2" id="your_info">Your Info:</label>
+
+    <label class="top2" for="name">Your name (As it will appear in the credits):</label>
+    <input type="text" id="name" name="name">
+
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="relationship">Relationship to T'Marcus:</label>
+    <input type="text" id="relationship" name="relationship" placeholder="(friend, family, colleague, etc)">
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location">
+
+    <hr style="border: 1px solid red;">
+
+    <label for="memory">Memory Submission</label>
+
+    <label for="memory">Memory/Tribute:</label>
+    <textarea id="memory" name="memory"></textarea>
+
+    <label for="file-upload">Upload Photos/Video:</label>
+    <input type="file" id="file-upload" name="file-upload">
+    <br>
+    <button class="upload-btn">Upload</button>
+
+    <div class="checkbox">
+        <input type="checkbox
